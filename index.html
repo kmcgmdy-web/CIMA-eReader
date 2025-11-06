@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>eBook Evolution - CIMA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="app-header">
+      <div class="branding">eBook Evolution - CIMA</div>
+      <div class="controls">
+        <input id="search" placeholder="Search this chapter" />
+        <button id="btn-tts">Read</button>
+        <select id="fontSize">
+          <option value="16">Normal</option>
+          <option value="18">Large</option>
+          <option value="20">Larger</option>
+        </select>
+        <button id="contrast">Contrast</button>
+        <button id="bookmark">Bookmark</button>
+        <button id="complete">Mark Complete</button>
+      </div>
+    </header>
+    <main class="reader">
+      <aside class="toc" id="toc">
+        <h3>Chapters</h3>
+        <ul id="chaptersList"></ul>
+      </aside>
+      <section class="content-area">
+        <div id="meta" class="meta"></div>
+        <article id="content" class="content" contenteditable="false"></article>
+        <div class="annotations">
+          <h4>Highlights & Notes</h4>
+          <div id="annotationsList"></div>
+          <textarea id="noteInput" placeholder="Add a note to selected text"></textarea>
+          <button id="saveNote">Save Note</button>
+        </div>
+      </section>
+    </main>
+    <footer class="app-footer">
+      <div id="status">Not signed in</div>
+      <div id="timer">Session: 00:00</div>
+    </footer>
+  </div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
